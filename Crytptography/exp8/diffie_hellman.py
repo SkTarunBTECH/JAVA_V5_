@@ -4,14 +4,14 @@ g = int(input("Enter primitive root (g): "))
 a = int(input("Enter User A's private key (a): "))
 b = int(input("Enter User B's private key (b): "))
 
-# Public keys
+# Public keys i.e g^a mod p
 A = pow(g, a, p)
 B = pow(g, b, p)
 
 print(f"User A's Public Key: {A}")
 print(f"User B's Public Key: {B}")
 
-# Shared keys
+# Shared keys i.e B^a mod p
 k_A = pow(B, a, p)
 k_B = pow(A, b, p)
 
